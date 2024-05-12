@@ -3,7 +3,11 @@ document.addEventListener("DOMContentLoaded", function() {
         var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
         if (screenWidth < 800) {
             document.getElementById("heading").style.display = "none";
-            document.getElementById("image").src = "lion.gif"; // Change image source to "lion.gif"
+            var imageElement = document.querySelector('img[src="lion.png"][alt="image of lions"]');
+            if (imageElement) {
+                imageElement.classList.add("eze");
+                imageElement.src = "lion.gif";
+            }
         }
     }, 7000); // 7 seconds
 });
