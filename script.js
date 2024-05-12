@@ -26,7 +26,11 @@ function changeImages() {
         if (spaceshipImage) {
             spaceshipImage.src = "star.gif";
         }
-        
+
+         var airBalloonImage = document.querySelector('img[src="hab.png"][alt="hot air balloons"]');
+        if (airBalloonImage) {
+            airBalloonImage.src = "air.gif";
+        }
     }
 }
 
