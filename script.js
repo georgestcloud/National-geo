@@ -21,6 +21,12 @@ function changeImages() {
         if (mlkImage) {
             mlkImage.src = "mlk.gif";
         }
+
+         var spaceshipImage = document.querySelector('img[src="science.png"][alt="image of spaceship"]');
+        if (spaceshipImage) {
+            spaceshipImage.src = "star.gif";
+        }
+        
     }
 }
 
