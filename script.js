@@ -8,6 +8,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 imageElement.classList.add("eze");
                 imageElement.src = "lion.gif";
             }
+
+            var imageElement = document.querySelector('img[src="ml.png"][alt="Marthin Luther King"]');
+            if (imageElement) {
+                imageElement.classList.add("eze");
+                imageElement.src = "mlk.gif";
+            }
         }
     }, 7000); // 7 seconds
 });
