@@ -206,6 +206,14 @@
 
 
   <script  src="./script.js"></script>
-
+<script>
+    // Wait for the document to load
+    document.addEventListener("DOMContentLoaded", function() {
+        // Hide the h1 after 10 seconds
+        setTimeout(function() {
+            document.getElementById("heading").style.display = "none";
+        }, 10000); // 10 seconds in milliseconds
+    });
+</script>
 </body>
 </html>
