@@ -1,22 +1,36 @@
-document.addEventListener("DOMContentLoaded", function() {
+// Function to hide the heading after 7 seconds
+function hideHeading() {
     setTimeout(function() {
-        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-        if (screenWidth < 800) {
-            document.getElementById("heading").style.display = "none";
-            var imageElement = document.querySelector('img[src="lion.png"][alt="image of lions"]');
-            if (imageElement) {
-                imageElement.classList.add("eze");
-                imageElement.src = "lion.gif";
-            }
-
-            var imageElement = document.querySelector('img[src="ml.png"][alt="Marthin Luther King"]');
-            if (imageElement) {
-                imageElement.classList.add("eze");
-                imageElement.src = "mlk.gif";
-            }
+        var heading = document.getElementById("heading");
+        if (heading) {
+            heading.style.display = "none";
         }
     }, 7000); // 7 seconds
+}
+
+// Function to change images when screen width is below 800px
+function changeImages() {
+    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if (screenWidth < 800) {
+        var lionImage = document.querySelector('img[src="lion.png"][alt="image of lions"]');
+        if (lionImage) {
+            lionImage.src = "lion.gif";
+        }
+
+        var mlkImage = document.querySelector('img[src="ml.png"][alt="Marthin Luther King"]');
+        if (mlkImage) {
+            mlkImage.src = "mlk.gif";
+        }
+    }
+}
+
+// Call the functions when the DOM content is loaded
+document.addEventListener("DOMContentLoaded", function() {
+    hideHeading(); // Hide the heading after 7 seconds
+    changeImages(); // Change images when the screen width is below 800px
 });
+
+
 
 document.addEventListener("DOMContentLoaded", function() {
     // Hide the h1 after 10 seconds
