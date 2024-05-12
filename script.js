@@ -5,7 +5,7 @@ function hideHeading() {
         if (heading) {
             heading.style.display = "none";
         }
-    }, 7000); // 7 seconds
+    }, 10000); // 10 seconds
 }
 
 // Function to change images when screen width is below 800px
