@@ -6,7 +6,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link rel="stylesheet" href="./style.css">
 
+<style>
+
+/* Adjusted CSS */
+
+@media only screen and (max-width: 800px) {
+  /* Apply styles when screen width is below 800px */
+
+  /* Make list items stand alone */
+  .panels {
+    grid-template-columns: auto; /* Each list item takes full width */
+  }
+
+  .panel {
+    width: auto; /* Each panel takes full width */
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .panels {
+    overflow-x: hidden;
+    white-space: nowrap;
+  }
+
+  .panel {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .slide-next-btn {
+    display: none !important;
+  }
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 800px) {
+  .panels {
+    overflow: hidden;
+  }
+  .panel {
+    width: 100%; /* Ensure each panel takes up the full width of the screen */
+    transition: transform 0.5s ease; /* Add smooth transition for sliding effect */
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 800px) {
+  .panel {
+    padding: 40px !important;
+  }
+}
+
+
+
+
+</style>
 </head>
+
 <body>
 
   
@@ -23,6 +88,8 @@
       </a>
     </li>
   </ul>
+
+
 
 
   <ul>
@@ -43,6 +110,9 @@
     </li>
   </ul>
 </nav>
+
+
+
 <section>
   <article>
     <ul class="panels">
@@ -59,6 +129,10 @@
             </svg>
           </span>
         </a>
+
+
+
+
         <img src="lion.png" alt="image of lions" />
       </li>
       <li class="panel">
@@ -77,6 +151,10 @@
         </a>
         <img src="ml.png" alt="Marthin Luther King" />
       </li>
+
+
+
+
       <li class="panel">
         <a href="#">
           <span>
@@ -110,7 +188,10 @@
         <img src="hab.png" alt="hot air balloons" />
       </li>
     </ul>
-    <h1>
+   
+
+
+    <h1 id="heading">
       <span class="gradient-text letter">E</span>
       <span class="gradient-text letter">X</span>
       <span class="gradient-text letter">P</span>
@@ -123,6 +204,7 @@
     <span class="geo-square">
       <img src="butterfly.gif" alt="butterfly" />
     </span>
+     <button class="slide-next-btn">Next</button>
   </article>
 </section>
 
